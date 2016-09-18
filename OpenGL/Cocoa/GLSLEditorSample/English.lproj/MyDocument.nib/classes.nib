@@ -1,0 +1,37 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                changeAutoCompile = id; 
+                changeLanguage = id; 
+                changeLinkerEnable = id; 
+                changeLogAssembly = id; 
+                changeLogParseTree = id; 
+                changeLogSymbolTable = id; 
+                changeOptimization = id; 
+                process = id; 
+            }; 
+            CLASS = MyDocument; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                LogSymbolTableCheckBox = NSButton; 
+                autoCompileCheckBox = NSButton; 
+                compileText = NSTextField; 
+                enableInLinkerCheckBox = NSButton; 
+                languagePopUp = NSPopUpButton; 
+                lineText = NSTextField; 
+                logAssemblyCheckBox = NSButton; 
+                logParseTreeCheckBox = NSButton; 
+                logTextView = NSTextView; 
+                optimizationPopUp = NSPopUpButton; 
+                originalTextView = NSTextView; 
+                ppShaderToProgramTextView = NSTextView; 
+                ppStreamTextView = NSTextView; 
+                statsTextView = NSTextView; 
+                symbolTableTextView = NSTextView; 
+            }; 
+            SUPERCLASS = NSDocument; 
+        }
+    ); 
+    IBVersion = 1; 
+}

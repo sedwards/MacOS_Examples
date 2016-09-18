@@ -1,0 +1,140 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {"" = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                animateToggle = id; 
+                autoLink = id; 
+                changeOptimization = id; 
+                changeTextureTarget = id; 
+                floatRendererToggle = id; 
+                fogEnableChange = id; 
+                fogTypeChange = id; 
+                fogValueChange = id; 
+                lightEnableChange = id; 
+                lightNumChange = id; 
+                lightToggle = id; 
+                lightTypeChange = id; 
+                lightValueChange = id; 
+                lightsPreset = id; 
+                lightsReset = id; 
+                lightsResetLight = id; 
+                link = id; 
+                objectToggle = id; 
+                selectTexture = id; 
+                selectUniform = id; 
+                textureImageDropped = id; 
+                uniformColorChange = id; 
+                uniformColumnChange = id; 
+                uniformMinMaxChange = id; 
+                uniformValueChange = id; 
+                useShaderToggle = id; 
+            }; 
+            CLASS = GLSLController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                animateButton = NSButton; 
+                autoLinkButton = NSButton; 
+                bindingTableTextView = NSTextView; 
+                fogEnable = id; 
+                fogValues = id; 
+                fogWValue = id; 
+                fogXValue = id; 
+                fogYValue = id; 
+                fogZValue = id; 
+                forceFloatRendererButton = NSButton; 
+                fragmentRendererText = NSTextField; 
+                glView = GLSLView; 
+                glslSupportText = NSTextField; 
+                lightOn = NSButton; 
+                lightWValue = NSFormCell; 
+                lightXValue = NSFormCell; 
+                lightYValue = NSFormCell; 
+                lightZValue = NSFormCell; 
+                lightsEnable = NSButton; 
+                lightsNum = NSPopUpButton; 
+                lightsPreset = NSPopUpButton; 
+                lightsValues = NSPopUpButton; 
+                linkResultText = NSTextField; 
+                logTextView = NSTextView; 
+                objectPopUp = NSPopUpButton; 
+                optimizationPopUp = NSPopUpButton; 
+                parser = GLSLParser; 
+                ppShaderToProgramTextView = NSTextView; 
+                ppstreamTextView = NSTextView; 
+                resultsTextView = NSTextView; 
+                statsTextView = NSTextView; 
+                tabView = NSTabView; 
+                textureOriginalSize = NSTextField; 
+                textureSize = NSTextField; 
+                textureTargetPopUp = NSPopUpButton; 
+                textureUnit0ImageView = NSImageView; 
+                textureUnit1ImageView = NSImageView; 
+                textureUnit2ImageView = NSImageView; 
+                textureUnit3ImageView = NSImageView; 
+                textureUnit4ImageView = NSImageView; 
+                textureUnit5ImageView = NSImageView; 
+                textureUnit6ImageView = NSImageView; 
+                textureUnit7ImageView = NSImageView; 
+                unformPullDown = NSPopUpButton; 
+                uniformColor = NSColorWell; 
+                uniformColumnPopUp = NSPopUpButton; 
+                uniformFloatResult = NSTextField; 
+                uniformInfo = NSTextField; 
+                uniformIntResult = NSTextField; 
+                uniformStatus = NSTextField; 
+                uniformWMax = NSTextField; 
+                uniformWMin = NSTextField; 
+                uniformWSlider = NSSlider; 
+                uniformWValue = NSTextField; 
+                uniformXMax = NSTextField; 
+                uniformXMin = NSTextField; 
+                uniformXSlider = NSSlider; 
+                uniformXValue = NSTextField; 
+                uniformYMax = NSTextField; 
+                uniformYMin = NSTextField; 
+                uniformYSlider = NSSlider; 
+                uniformYValue = NSTextField; 
+                uniformZMax = NSTextField; 
+                uniformZMin = NSTextField; 
+                uniformZSlider = NSSlider; 
+                uniformZValue = NSTextField; 
+                useShaderButton = NSButton; 
+                vertexRendererText = NSTextField; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = GLSLLinkerWindow; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {controller = GLSLController; }; 
+            SUPERCLASS = NSWindow; 
+        }, 
+        {
+            CLASS = GLSLParser; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {controller = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = GLSLView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                colorAText = NSTextField; 
+                colorBText = NSTextField; 
+                colorGText = NSTextField; 
+                colorRText = NSTextField; 
+                controller = GLSLController; 
+            }; 
+            SUPERCLASS = NSOpenGLView; 
+        }, 
+        {CLASS = NSLevelIndicator; LANGUAGE = ObjC; SUPERCLASS = NSControl; }, 
+        {CLASS = NSSegmentedControl; LANGUAGE = ObjC; SUPERCLASS = NSControl; }
+    ); 
+    IBVersion = 1; 
+}

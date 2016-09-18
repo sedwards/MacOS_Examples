@@ -1,0 +1,113 @@
+GLSLEditorSample Read Me: (13 March 2006)
+
+Application use:
+
+New shader files can be created or opened
+    - .fsh and .frag are the supported fragment shader file extensions
+    - .vsh and .vert are the supported fragment shader file extensions
+    - Other file extension can be added to the sample in the target info
+    - Note, an open file have a type determined by the popup menu which
+      invocation of the proper compiler.
+Once shaders are loaded or created they can be compiled
+    - Normally the "Auto compile" control is checked and the shader will
+      be compiled as one types.  If this is not desired one can disable
+      auto-compiling by un-checking the control.
+    - Compile errors will be indicated with a red background and
+      information in the "Log" tab with the line number of the error
+    - The top information field will indicate the compile status of the
+      shader.
+Once shaders are loaded or created they can be link and "Used"
+    - By default all open shaders are included in the files to be linked
+    - Shaders can be excluded from linking by un-checking the "Attached
+      to Program" control.
+    - Normally the "Auto link" control is checked and the shader will be
+      linked with all other shader, that are attached, as one edits any
+      shader code.  If this is not desired one can disable auto-lining
+      by un-checking the control.
+    - Link and validation errors are indicated in the top link status
+      window and errors will be displayed in the "Log" tab.
+    - After linking link results using standard OpenGL GLSL API will be
+      displayed in the results tab.  This enables one to see what the
+      API's view of a shader program.
+    - Once a program is linked successfully the "Use program" control
+      can enable rendering with the shader program.
+    - Uniforms can be modified in the Uniforms tab when the program is
+      in use.
+    - The application will "remember" uniform values between links and
+      between application launches, enabling simpler set up for complex
+      shaders.  Note, this is a feature of the sample and not one of the
+      API, by definition, all uniform values are set to zero on link or
+      re-link.  Keep this in mind when developer shader programs.
+Once the shader program is linked and in use the results will be shown
+in the "OpenGL Results" window.
+    - Different surfaces can be displayed to test your shader and the
+     display can be set to animate or not.
+    - It is simple for one to replace the drawing section of the sample
+      with rendering more closely tailored to ones own app.  See the
+      GLSLView.m file.
+Other functions should be the same as a standard text editing application.
+
+
+Sample and GLSL Information:
+
+This sample code is provided as a sample of some techniques for both
+writing a simple code editor, a GLSL compiler/linker front end and a
+simple GLSL rendering display.  It also allows testing of shaders and
+can be customized by developers to use actual content or rendering
+techniques and settings used in their own apps.
+
+While AppKit and Cocoa make writing this sample possible, it is not
+an example of any specific Cocoa development techniques.  Developers 
+should look to specific Cocoa coding samples and documentation for
+more information on AppKit and Cocoa development.
+
+This sample is meant to show fairly simple yet correct GLSL usage. It is
+NOT designed to show optimal GLSL usage and will compile/link, redraw,
+and set uniforms rather often without an eye to being particularly
+optimal at it.
+
+Developers using GLSL for their own apps will want to subscribe to the
+compile/link/set once and use many times design paradigm.  This means
+compile and link shaders as needed but understand it is a process that
+is on the order of milliseconds not microseconds.  Additionally, setting
+uniforms is an optimized path but one should always plan to use
+attributes for values that change per vertex and uniforms for values
+which are "uniform" across many vertices.  The bottom-line is that
+changing shader state (either by compiling/linker or modifying uniform
+values) should be minimized for maximum shader performance.
+
+As always references for GLSL are available at opengl.org.  Specifically
+the following documents should be considered the bibles for developing
+GLSL applications.
+
+The OpenGL Shading Language Specification: (.pdf file)
+<http://oss.sgi.com/projects/ogl-sample/registry/ARB/GLSLangSpec.Full.1.10.59.pdf>
+
+ARB_shading_language_100 Specification:
+<http://oss.sgi.com/projects/ogl-sample/registry/ARB/shading_language_100.txt>
+
+ARB_shader_objects Specification:
+<http://oss.sgi.com/projects/ogl-sample/registry/ARB/shader_objects.txt>
+
+ARB_vertex_shader Specification:
+<http://oss.sgi.com/projects/ogl-sample/registry/ARB/vertex_shader.txt>
+
+ARB_fragment_shader Specification:
+<http://oss.sgi.com/projects/ogl-sample/registry/ARB/fragment_shader.txt>
+
+It is very strongly recommended that developers get these references and
+keep them at hand when resolves language and API issues, these have the
+final say as to what is correct and should be considered to override
+contrary information from other sources.
+
+Finally, the Apple GLSL compiler and linker strive to conform with the
+latest GLSL specification and currently pass all 186 validation tests
+presented in the 3DLabs parser validation suite of March 2005. Note,
+these tests do not test rendering capability but the ability to parse
+and compile code. Renderer support will vary by vendor and renderer,
+specific renderer issues are not covered in this Read Me.
+
+Please report all suspected bugs at:
+<http://developer.apple.com/bugreporter>
+
+Thanks

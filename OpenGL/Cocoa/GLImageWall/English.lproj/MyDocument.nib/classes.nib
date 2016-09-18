@@ -1,0 +1,35 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = GLImageSplitterDocument; LANGUAGE = ObjC; SUPERCLASS = NSDocument; }, 
+        {
+            ACTIONS = {fullScreen = id; textureImageDropped = id; tileSizeChanged = id; }; 
+            CLASS = GLImageSplitterView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {imageView = NSImageView; tileSize = NSComboBox; }; 
+            SUPERCLASS = NSOpenGLView; 
+        }, 
+        {CLASS = MyDocument; LANGUAGE = ObjC; SUPERCLASS = NSDocument; }, 
+        {
+            ACTIONS = {
+                AGPTexturingChanged = id; 
+                bordersChanged = id; 
+                fullScreen = id; 
+                resetDisplays = id; 
+                textureImageDropped = id; 
+                tileSizeChanged = id; 
+            }; 
+            CLASS = SplitterBox; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                AGPTexturingCheckBox = NSButton; 
+                bordersCheckBox = NSButton; 
+                displaysConfig = NSTableView; 
+                imageView = NSImageView; 
+                tileSize = NSComboBox; 
+            }; 
+            SUPERCLASS = NSView; 
+        }
+    ); 
+    IBVersion = 1; 
+}
